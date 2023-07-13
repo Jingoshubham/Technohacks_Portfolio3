@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <main >
+        <h1>shubham</h1>
+        <div>
+            <div class="calcback">
+                <form>
+                    <input type="text" id="result" disabled placeholder="Enter values">
+                    <br>
+                <div class="keys">
+<div class="digits">
+<form>
+    <input type="button" value="1" onclick="addChar('1')" id="one">
+    <input type="button" value="2" onclick="addChar('2')" id="two">
+    <input type="button" value="3" onclick="addChar('3')" id="thr">
+    <input type="button" value="+" onclick="addChar('+')" id="add">
+    <input type="button" value="/" onclick="addChar('/')" id="div"><br>
+    <input type="button" value="4" onclick="addChar('4')" id="fr">
+    <input type="button" value="5" onclick="addChar('5')" id="fv">
+    <input type="button" value="6" onclick="addChar('6')" id="sx">
+    <input type="button" value="-" onclick="addChar('-')" id="min">
+    <input type="button" value="*" onclick="addChar('*')" id="mult"><br>
+    <input type="button" value="7" onclick="addChar('7')" id="svn">
+    <input type="button" value="8" onclick="addChar('8')" id="et">
+    <input type="button" value="9" onclick="addChar('9')" id="nn">
+   
+    <br>
+    <input type="button" value="0" onclick="addChar('0')" id="zero">
+    <input type="button" value="C" onclick="clearResult()" id="clr">
+    <input type="button" value="=" onclick="calculateResult()" id="res">
+    <br>
+
+</form>
+<script>
+    function addChar(char) {
+        document.getElementById("result").value += char;
+    }
+    function clearResult() {
+        document.getElementById("result").value = "";
+    }
+    function calculateResult() {
+        var result = eval(document.getElementById("result").value);
+        document.getElementById("result").value = result;
+    }
+</script>
+</body>
+
+</html>
